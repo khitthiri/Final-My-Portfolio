@@ -1,0 +1,361 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab); 
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    margin: 0;
+    background-size: cover; /* Ensures background covers entire viewport */
+    background-attachment: fixed; /* Keeps background fixed while scrolling */
+}
+
+
+/* Headings */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Header */
+/* Style for the fixed navigation bar */
+header {
+    position: fixed; /* Fixes the header to the top */
+    top: 0; /* Aligns it to the top of the page */
+    left: 0; /* Stretches it to the left */
+    width: 100%; /* Makes the header span the entire width */
+    z-index: 1000; /* Ensures it stays above other elements */
+    background: #333; /* Background color to make it stand out */
+    color: #fff; /* Text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: translateY(0); /* Initial position at top */
+}
+
+/* Add some padding to the top of the body to prevent content overlap */
+body {
+    padding-top: 60px; /* Adjust this based on the height of your nav bar */
+}
+
+#menuButton {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#menuButton:focus {
+    outline: 2px solid #fff;
+}
+
+#menuButton:hover {
+    background-color: #555;
+}
+
+/* Navigation list styling (unchanged) */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007BFF; /* Highlight color on hover */
+}
+
+/* Hidden Menu for Mobile */
+.hidden {
+    display: none;
+}
+
+/* Bio Section */
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bio img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #333;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.contact-link:hover {
+    background: #555;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: #fff;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit; /* Matches the current text color */
+}
+
+.project-card a:hover {
+    color: #007BFF; /* Change to a highlight color */
+    text-decoration: underline;
+}
+
+.project-card img {
+    transition: transform 0.3s ease;
+}
+
+.project-card a:hover img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    resize: none;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Blog Section */
+.blog-post {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Design for Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+    /* Adjust navigation for tablets */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    /* Adjust bio section layout */
+    .bio {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .bio img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Reduce grid columns for projects */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 768px) {
+    /* Reduce padding and margins for tighter spacing */
+    body {
+        font-size: 90%; /* Slightly smaller font size for smaller screens */
+    }
+
+    header nav ul {
+        gap: 0.5rem;
+    }
+
+    .section {
+        padding: 1.5rem 0;
+    }
+
+    /* Form adjustments */
+    form input, form textarea {
+        font-size: 0.9rem; /* Smaller input font */
+        padding: 0.4rem;
+    }
+
+    form button {
+        padding: 0.6rem;
+        font-size: 0.95rem;
+    }
+
+    /* Blog section cards */
+    .blog-post {
+        padding: 0.8rem;
+    }
+
+    .blog-post h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive Design for Small Mobile Devices */
+@media (max-width: 480px) {
+    /* Center-align all text */
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 0.3rem 0;
+    }
+
+    .bio img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column for projects */
+        gap: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.85rem; /* Smaller footer text */
+    }
+}
+

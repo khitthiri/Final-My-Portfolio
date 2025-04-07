@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio Website">
+    <title>Khit's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h1>About Me</h1>
+            <div class="bio">
+                <img src="images/Khit.jpg" alt="Your Photo" class="profile-img">
+                <p>Hi, I'm Khit, a passionate web developer. I specialize in building responsive and accessible websites.</p>
+                <a href="mailto:khit.t66@rsu.ac.th" class="contact-link">Contact me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h1>Projects</h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                        <img src="Images/Cocktails.png" alt="Get Cocktails Project">
+                    <h2><a href="https://github.com/khitthiri/Cocktails.git" target="_blank" aria-label="View Get Cocktails Project">Get Cocktails</a></h2>
+                    <p>A website for getting cocktail recipes every time you refresh the page.</p>
+                </div>
+                <div class="project-card">
+                        <img src="Images/Log-in.png" alt="Log In Project">
+                    <h2><a href="https://github.com/khitthiri/Log-in-.git" target="_blank" aria-label="View Login Project">Log In</a></h2>
+                    <p>A simple log-in web page.</p>
+                </div>
+                <div class="project-card">
+                        <img src="Images/Shoppingcart.png" alt="Shopping Cart Project">
+                    <h2><a href="https://github.com/khitthiri/Shopping-Cart.git" target="_blank" aria-label="View Shopping Cart Project">Shopping Cart</a></h2>
+                    <p>A simple shopping cart for items and calculation with discounts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h1>Contact</h1>
+            <form action="#" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section" role="region" aria-labelledby="blog-heading">
+        <div class="container">
+            <h1 id="blog-heading">My Blog</h1>
+            <article class="blog-post">
+                <h2>Learning HTML & CSS</h2>
+                <p>
+                    My journey learning HTML and CSS has been amazing! I love how these tools bring creative ideas to life.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Khit. All rights reserved.</p>
+    </footer>
+</body>
+</html>

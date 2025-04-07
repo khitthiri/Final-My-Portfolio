@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/docs/styles.css">
+</head>
+<body>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <% if (message) { %>
+                <p class="error"><%= message %></p>
+            <% } %>
+            <form action="/submit" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="message" placeholder="Your Message" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>
