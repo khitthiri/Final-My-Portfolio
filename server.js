@@ -2,9 +2,6 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Server config
-const PORT = 3000;
-
 // Set the view engine to EJS and define the correct directory for views
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); // Correct EJS templates path
@@ -100,7 +97,7 @@ app.use((req, res) => {
     res.status(404).send('<h1>PAGE NOT FOUND!</h1>');
 });
 
-// Start server
-app.listen(PORT, '127.0.0.1', () => {
-    console.log(`Listening to requests on http://127.0.0.1:3000`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
